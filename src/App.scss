@@ -1,0 +1,116 @@
+$main-color: #fff;
+$main-bg-color: violet;
+
+//variables sass
+
+  button {
+    color: $main-color;
+    background-color: $main-bg-color;
+  }
+
+
+
+// css
+
+// .variables button{
+//   color: #fff;
+//   background-color: violet;
+// }
+
+//nesting sass
+
+body {
+  background-color: yellow;
+  .container {
+    text-align: center;
+    background-color: blue;
+    button {
+      font-size: 40px;
+      border: 0;
+    }
+  }
+}
+
+
+//css
+// body {
+//   background-color: yellow;
+// }
+
+// body .container {
+//   background-color: blue;
+// }
+
+// .container button {
+//   font-size: 20px;
+// }
+
+
+//mixins sass
+
+@mixin border-radius($property) {
+  border-radius: $property;
+}
+
+button { 
+  @include border-radius(5px); 
+}
+
+//css
+
+// button { 
+//   border-radius: 5px; 
+// }
+
+
+//Extend/Inheritance sass
+
+%sexy-text {
+  text-shadow: #FFF 0px 0px 5px, 
+    #FFF 0px 0px 10px, 
+    #FFF 0px 0px 15px, 
+    #FF2D95 0px 0px 20px, 
+    #FF2D95 0px 0px 30px,
+    #FF2D95 0px 0px 40px, 
+    #FF2D95 0px 0px 50px, 
+    #FF2D95 0px 0px 75px;
+}
+
+button {
+  @extend %sexy-text;
+}
+
+
+//css
+// button {
+//   text-shadow: #FFF 0px 0px 5px, 
+//     #FFF 0px 0px 10px, 
+//     #FFF 0px 0px 15px, 
+//     #FF2D95 0px 0px 20px, 
+//     #FF2D95 0px 0px 30px,
+//     #FF2D95 0px 0px 40px, 
+//     #FF2D95 0px 0px 50px, 
+//     #FF2D95 0px 0px 75px;
+// }
+
+
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+//operators 
+
+$value: 20px;
+button {
+  font-size: $value*1.5 !important;
+  width: (100% / 3);
+}
+
+
+button {
+  font-size: 50px;
+  cursor: pointer;
+}
